@@ -14,8 +14,8 @@ int main()
 	// string str2 = "helloworld2";
 	// cout << str2 << endl;
 
-	string s = "http://c.biancheng.net";
-
+	string s = "h";
+	cout << s.size() << endl;
 	// system("pause");
 
 	return 0;
