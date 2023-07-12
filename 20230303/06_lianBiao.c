@@ -1,7 +1,7 @@
 //链表实现尾部添加
 #include<stdio.h>
 #include<stdlib.h>
-
+Max 10000;
 typedef struct Node
 {
     int nvalue;

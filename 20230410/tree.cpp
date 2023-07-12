@@ -164,6 +164,18 @@ void LayerOrder(BinaryTree *pTree){
         }
     }
 }
+//镜像二叉树
+void jingxiang(BinaryTree * root){
+    //不改变根节点，不需要传地址
+	if (root==NULL){
+	return;
+    }
+    BinaryTree * temp= root->pLeft;
+    root->pLeft=root->pRight;
+    root->pRight=temp;
+    jingxiang(root->pLeft);
+    jingxiang(root->pRight);
+}
 
 int main(){
     BinaryTree *pRoot = NULL;
@@ -171,7 +183,13 @@ int main(){
 
     // PreOrder(pRoot);
     // InOrder(pRoot);
-    LastOrder(pRoot);
+    PreOrder(pRoot);
+    printf("\n");
+    LayerOrder(pRoot);
+    printf("\n");
+    jingxiang(pRoot);
+    printf("镜像后\n");
+    PreOrder(pRoot);
     printf("\n");
     LayerOrder(pRoot);
     printf("\n");
